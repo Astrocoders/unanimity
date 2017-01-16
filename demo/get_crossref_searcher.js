@@ -6,10 +6,8 @@ module.exports = function getCrossRefWorkSearcherForParam({ param }){
       return data.message.items.map(article => ({
         DOI: article.DOI,
         title: article['title'][0] ||article['container-title'][0] || article['original-title'][0],
-        publisher: article.publisher,
         type: article.type,
         createdAt: article.created.timestamp,
-        source: article.source,
         url: article.URL,
       }))
     },

@@ -4,6 +4,8 @@ const {
   mapValues,
   flatten,
   values,
+  omitBy,
+  isUndefined,
 } = require('lodash/fp')
 const unanimity = require('../index')
 const getCrossRefWorkSearcherForParam = require('./get_crossref_searcher')
@@ -18,7 +20,10 @@ const ArticleSearcher = unanimity([
     return flow(
       flatten,
       groupBy('DOI'),
-      mapValues(sameDOIArticles => Object.assign(...sameDOIArticles)),
+      mapValues(sameDOIArticles => {
+        const cleanedUpArticles = sameDOIArticles.map(omitBy(isUndefined))
+        return Object.assign(...cleanedUpArticles)
+      }),
       values,
     )(results)
   },

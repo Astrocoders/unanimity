@@ -8,10 +8,7 @@ module.exports = function getDataCiteSearcher(){
         title: article.attributes.title,
         authors: article.attributes.author.map(author => author.literal || `${author.given} ${author.family}`),
         abstract: article.attributes.description,
-        publisher: article.attributes.publisher,
-        type: article.type,
         createdAt: article.attributes.deposited,
-        source: 'DataCite',
         url: article.url || article.id,
       }))
     },
