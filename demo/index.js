@@ -7,7 +7,7 @@ const {
   omitBy,
   isUndefined,
 } = require('lodash/fp')
-const unanimity = require('../index')
+const unanimity = require('../dist')
 const getCrossRefWorkSearcherForParam = require('./get_crossref_searcher')
 const getDataCiteSearcher = require('./get_datacite_searcher')
 
