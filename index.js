@@ -1,12 +1,6 @@
 const fetch = require('node-fetch')
 
-type API = {
-  url: string,
-  responseHandler: () => any,
-  queryHandler: () => any,
-}
-
-function APIUnanimity(apis: Array<API> = [], { dataMerger = x => x }){
+function APIUnanimity(apis, { dataMerger = x => x }){
   return {
     search(searchParams){
       return Promise

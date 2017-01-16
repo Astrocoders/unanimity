@@ -24,7 +24,7 @@ const ArticleSearcher = unanimity([
         const cleanedUpArticles = sameDOIArticles.map(omitBy(isUndefined))
         return Object.assign(...cleanedUpArticles)
       }),
-      values,
+      values
     )(results)
   },
 })
