@@ -1,0 +1,15 @@
+{
+  "name": "api-unanimity",
+  "version": "1.0.0",
+  "description": "Unify searching across multiple APIs",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "node-fetch": "^1.6.3"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-flow-strip-types": "^6.21.0",
+    "flow-bin": "^0.37.4"
+  }
+}
