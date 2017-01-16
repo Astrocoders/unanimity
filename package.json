@@ -2,7 +2,7 @@
   "name": "api-unanimity",
   "version": "1.0.1",
   "description": "Unify searching across multiple APIs",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
     "pre-publish": "babel src/ --out-dir ./dist"
