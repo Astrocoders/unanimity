@@ -11,6 +11,8 @@ function APIUnanimity(apis, _ref) {
   return {
     search: function search(searchParams) {
       return Promise.all(apis.map(function (api) {
+        if (api.promise) return api.promise;
+
         var url = api.queryHandler({
           url: api.url,
           search: searchParams

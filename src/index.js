@@ -6,6 +6,8 @@ function APIUnanimity(apis, { dataMerger = x => x }){
       return Promise
         .all(
           apis.map(api => {
+            if(api.promise) return api.promise
+
             const url = api.queryHandler({
               url: api.url,
               search: searchParams,
